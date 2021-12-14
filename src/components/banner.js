@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Col, Button } from 'react-bootstrap'
+import { Col, Button } from 'react-bootstrap'
 
 const Banner = ({ homepage, lg, global }) => {
   return (

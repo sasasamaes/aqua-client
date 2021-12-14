@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Col, Button } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 
 const Section2 = ({ homepage, lg }) => {
   return (
