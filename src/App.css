@@ -108,6 +108,7 @@ img:hover {
 .slider-container {
   padding: 0;
   height: 85vh;
+  overflow: hidden;
 }
 .slider-container .carousel {
   height: 100%;
@@ -150,11 +151,13 @@ img:hover {
 
 /* service-container */
 .service-container {
+  display: flex;
 }
 .service-container .service-item {
   height: 150px;
   display: flex;
   align-items: center;
+  justify-content: center;
   color: white;
   padding: 1.5rem;
 }
