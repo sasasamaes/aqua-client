@@ -42,12 +42,25 @@ img:hover {
 /* NavBar */
 #navbar {
   height: 40px;
+  color: white;
+  display: flex;
 }
 
 #navbar img {
-  position: inherit !important;
   width: 30px !important;
   height: 30px !important;
+}
+.navbar-brand {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-right: 0;
+}
+.navbar-brand p {
+  margin-bottom: 0;
+  margin-left: 5px;
 }
 
 /* form */
