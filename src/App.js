@@ -66,7 +66,10 @@ function App() {
         }
       />
 
-      <Route path="/model" element={<ModelPage />} />
+      <Route
+        path="/model/:id"
+        element={<ModelPage models={models} global={global} />}
+      />
     </Routes>
   )
 }
