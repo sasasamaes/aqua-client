@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.modal {
+  top: 23% !important;
+}
+.modal-dialog {
+  width: 65vw !important;
+  max-width: inherit !important;
+}
+.modal-content {
+}

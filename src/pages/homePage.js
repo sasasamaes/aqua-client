@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Layout from '../components/layout'
 import HomeSlider from '../components/homeSlider'
 import FormComponent from '../components/form'
@@ -13,14 +13,49 @@ import Maps from '../components/maps'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../App.css'
 
-function Homepage({
-  global,
-  homepage,
-  services,
-  models,
-  amenities,
-  homeSlider,
-}) {
+function Homepage() {
+  const [homeSlider, setHomeSlider] = useState([])
+  const [homepage, setHomepage] = useState()
+  const [services, setServices] = useState([])
+  const [models, setModels] = useState([])
+  const [global, setGlobal] = useState([])
+  const [amenities, setAmenities] = useState([])
+
+  const fetchData = async () => {
+    const url = 'https://aquacr-cms.herokuapp.com'
+    try {
+      const homeSliderResponse = await fetch(`${url}/home-sliders`)
+      const homeSliderResponseJson = await homeSliderResponse.json()
+      setHomeSlider(homeSliderResponseJson)
+
+      const homepageResponse = await fetch(`${url}/homepage`)
+      const homepageResponseJson = await homepageResponse.json()
+      setHomepage(homepageResponseJson)
+
+      const servicesResponse = await fetch(`${url}/services`)
+      const servicesResponseJson = await servicesResponse.json()
+      setServices(servicesResponseJson)
+
+      const modelsResponse = await fetch(`${url}/models`)
+      const modelsResponseJson = await modelsResponse.json()
+      setModels(modelsResponseJson)
+
+      const globalResponse = await fetch(`${url}/global`)
+      const globalResponseJson = await globalResponse.json()
+      setGlobal(globalResponseJson)
+
+      const amenitiesResponse = await fetch(`${url}/amenities`)
+      const amenitiesResponseJson = await amenitiesResponse.json()
+      setAmenities(amenitiesResponseJson)
+    } catch (error) {
+      console.log('error', error)
+    }
+  }
+
+  useEffect(() => {
+    fetchData()
+  }, [])
+
   return (
     <Layout global={global}>
       <HomeSlider homeSlider={homeSlider} lg={9} />
