@@ -16,6 +16,7 @@ const AmenitySlider = ({ amenities }) => {
               </Carousel.Item>
             )
           }
+          return null
         })}
     </Carousel>
   )

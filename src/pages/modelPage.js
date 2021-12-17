@@ -5,14 +5,7 @@ import { Row, Col, Modal, Button } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../App.css'
 
-function ModelPage({
-  global,
-  homepage,
-  services,
-  models,
-  amenities,
-  homeSlider,
-}) {
+function ModelPage({ global }) {
   const [show, setShow] = useState(false)
 
   const handleClose = () => setShow(false)
@@ -33,6 +26,7 @@ function ModelPage({
             <Row>
               <Col>
                 <iframe
+                  title="title"
                   width="100%"
                   height="360"
                   src={`https://roundme.com/embed/${792292}/${2501791}`}
