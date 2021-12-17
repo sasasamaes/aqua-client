@@ -341,3 +341,7 @@ img:hover {
 .maps-container img {
   width: 100%;
 }
+/* model-item-page */
+.model-item-page {
+  display: flex;
+}

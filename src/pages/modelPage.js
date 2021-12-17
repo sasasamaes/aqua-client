@@ -33,25 +33,26 @@ function ModelPage() {
 
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
-  console.log('model', model)
   return (
     <Layout global={global}>
-      <Col className="model-item" key={`model-item`}>
-        <Col>
-          <img
-            src={model?.architecturalPlan?.url}
-            alt={model?.architecturalPlan?.caption}
-          />
-        </Col>
-        <Col>
-          <h3>{model.title}</h3>
-          <p>{model.price}</p>
-          <p>{model.description}</p>
+      <Col className="model-item-page" key={`model-item`}>
+        <Row>
+          <Col lg={5}>
+            <img
+              src={model?.architecturalPlan?.url}
+              alt={model?.architecturalPlan?.caption}
+            />
+          </Col>
+          <Col lg={6}>
+            <h3>{model.title}</h3>
+            <p>{model.price}</p>
+            <p>{model.description}</p>
 
-          <Button variant="primary" onClick={handleShow}>
-            {model.btnText}
-          </Button>
-        </Col>
+            <Button variant="primary" onClick={handleShow}>
+              {model.btnText}
+            </Button>
+          </Col>
+        </Row>
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton></Modal.Header>
           <Modal.Body>
