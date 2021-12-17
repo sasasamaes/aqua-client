@@ -7,8 +7,8 @@ const Section2 = ({ homepage, lg }) => {
       <h3>{homepage && homepage.section2.title}</h3>
       <Col className="section2-img">
         <img
-          src={homepage?.section2?.background.url}
-          alt={homepage?.section2?.background.caption}
+          src={homepage?.section2?.img.url}
+          alt={homepage?.section2?.img.caption}
         />
       </Col>
       <Col className="section2-text bg-dark text-light">

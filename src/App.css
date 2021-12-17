@@ -277,10 +277,10 @@ img:hover {
   height: 400px;
 }
 .section2-img {
-  width: 50%;
+  width: 45vw;
   position: absolute;
-  top: 15%;
-  left: 25%;
+  top: 17%;
+  left: 27%;
 }
 .section2-text {
   height: 200px;
@@ -344,4 +344,6 @@ img:hover {
 /* model-item-page */
 .model-item-page {
   display: flex;
+  height: 70vh;
+  align-items: center;
 }

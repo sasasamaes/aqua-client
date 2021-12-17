@@ -12,7 +12,6 @@ code {
     monospace;
 }
 .modal {
-  top: 23% !important;
 }
 .modal-dialog {
   width: 65vw !important;
