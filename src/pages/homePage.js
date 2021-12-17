@@ -9,6 +9,7 @@ import Banner from '../components/banner'
 import Amenities from '../components/amenities'
 import Section2 from '../components/section2'
 import Models from '../components/models'
+import Maps from '../components/maps'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../App.css'
 
@@ -31,6 +32,7 @@ function Homepage({
       <Amenities lg={12} amenities={amenities} />
       <Section2 lg={12} homepage={homepage} />
       <Models lg={12} homepage={homepage} models={models} />
+      <Maps lg={12} global={global} homepage={homepage} />
     </Layout>
   )
 }

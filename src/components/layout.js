@@ -3,11 +3,9 @@ import Nav from './nav'
 
 const Layout = ({ children, seo, global }) => (
   <Container fluid padding={0}>
-    <Row>
-      <Col>
-        <Nav global={global} />
-      </Col>
-    </Row>
+    <Col>
+      <Nav global={global} />
+    </Col>
     <Row className="content">{children}</Row>
   </Container>
 )
