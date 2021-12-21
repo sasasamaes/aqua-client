@@ -13,10 +13,12 @@ const Banner = ({ homepage, lg, global }) => {
           <h3>Veni conocenos y reserva el tuyo</h3>
         </Col>
         <Col lg={4}>
-          <Button variant="primary" type="submit">
-            {/* {homepage && homepage.attributes.banner.boton} */}
-            Contactanos
-          </Button>
+          <a href="#form">
+            <Button variant="primary" type="submit">
+              {/* {homepage && homepage.attributes.banner.boton} */}
+              Contactanos
+            </Button>
+          </a>
         </Col>
       </Col>
     </Col>

@@ -5,12 +5,11 @@ import { Row, Col, Modal, Button } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../App.css'
 
-function ModelPage() {
+function AboutUsPage() {
   const params = useParams()
-  const [model, setModel] = useState({})
+  const [model, setModel] = useState([])
   const [global, setGlobal] = useState([])
 
-  // eslint-disable-next-line
   const fetchData = async () => {
     const url = 'https://aquacr-cms.herokuapp.com'
     try {
@@ -28,13 +27,12 @@ function ModelPage() {
 
   useEffect(() => {
     fetchData()
-  }, [params.id, fetchData])
+  })
 
   const [show, setShow] = useState(false)
 
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
-
   return (
     <Layout global={global}>
       <Col className="model-item-page" key={`model-item`}>
@@ -64,7 +62,7 @@ function ModelPage() {
                   title={`iframe-${params.id}`}
                   width="100%"
                   height="460"
-                  src={`https://roundme.com/embed/${model?.userRoundme}/${model?.hotpointRoundme}`}
+                  src={`https://roundme.com/embed/${model?.UserRoundme}/${model?.hotpointRoundme}`}
                   frameborder="0"
                   webkitallowfullscreen
                   mozallowfullscreen
@@ -79,4 +77,4 @@ function ModelPage() {
   )
 }
 
-export default ModelPage
+export default AboutUsPage

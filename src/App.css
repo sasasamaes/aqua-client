@@ -118,7 +118,6 @@ img:hover {
 /* slider home */
 .slider-container {
   padding: 0;
-  height: 85vh;
   overflow: hidden;
 }
 .slider-container .carousel {
@@ -129,6 +128,19 @@ img:hover {
 }
 .slider-container .carousel-item {
   height: 90%;
+}
+.slider-container img {
+  object-fit: fill;
+  height: 100%;
+  width: 100%;
+}
+.slider-container .carousel-inner {
+  height: 100%;
+}
+.carousel-fade .carousel-item-next.carousel-item-start,
+.carousel-fade .carousel-item-prev.carousel-item-end,
+.carousel-fade .carousel-item.active {
+  height: 100%;
 }
 
 /* global */

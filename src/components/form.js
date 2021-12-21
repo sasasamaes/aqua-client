@@ -3,7 +3,7 @@ import { Form, Button, Col } from 'react-bootstrap'
 
 const FormComponent = ({ homepage, lg, global }) => {
   return (
-    <Col lg={lg} className="form-container bg-dark" padding={0}>
+    <Col lg={lg} id="form" className="form-container bg-dark" padding={0}>
       <Col lg={12} className="form-container-logo">
         <img src={global?.logo2?.url} alt={global?.logo2?.caption} />
       </Col>
