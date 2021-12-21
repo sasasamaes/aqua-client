@@ -13,13 +13,15 @@ const Amenities = ({ amenities, lg }) => {
   }
   return (
     <Col lg={lg} className="amenities-container bg-light">
-      <Col lg={5} className="amenities-menu">
+      <Col lg={5} md={12} xs={12} className="amenities-menu">
         <Row>
           {amenities &&
             amenities?.map((amenity, index) => (
               <>
                 <Col
                   lg={3}
+                  md={6}
+                  xs={12}
                   key={`amanity-${index}`}
                   className="amenity"
                   onClick={() => handleShow(amenity)}
@@ -31,7 +33,7 @@ const Amenities = ({ amenities, lg }) => {
             ))}
         </Row>
       </Col>
-      <Col lg={6} className="amenities-slider">
+      <Col lg={6} md={12} xs={12} className="amenities-slider">
         <AmenitySlider amenities={amenities} />
       </Col>
 

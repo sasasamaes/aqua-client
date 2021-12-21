@@ -37,15 +37,15 @@ function ModelPage() {
 
   return (
     <Layout global={global}>
-      <Col className="model-item-page" key={`model-item`}>
+      <Col className="model-item-page bg-dark text-light" key={`model-item`}>
         <Row>
-          <Col lg={5}>
+          <Col lg={8}>
             <img
               src={model?.architecturalPlan?.url}
               alt={model?.architecturalPlan?.caption}
             />
           </Col>
-          <Col lg={6}>
+          <Col lg={3}>
             <h3>{model.title}</h3>
             <p>{model.price}</p>
             <p>{model.description}</p>

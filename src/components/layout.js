@@ -1,11 +1,7 @@
-import { Container, Row, Col } from 'react-bootstrap'
-import Nav from './nav'
+import { Container, Row } from 'react-bootstrap'
 
-const Layout = ({ children, seo, global }) => (
+const Layout = ({ children }) => (
   <Container fluid padding={0}>
-    <Col>
-      <Nav global={global} />
-    </Col>
     <Row className="content">{children}</Row>
   </Container>
 )

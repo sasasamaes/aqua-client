@@ -28,10 +28,9 @@ img:hover {
   transition: opacity 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 .bg-dark {
-  background-color: #011523 !important;
+  background-color: black !important;
 }
 .content {
-  padding-top: 3.5rem !important;
 }
 
 .navbar-img {
@@ -226,6 +225,7 @@ img:hover {
   padding-bottom: 1rem;
   padding-left: 3rem;
   padding-right: 3rem;
+  flex-wrap: wrap;
 }
 
 .amenity {
@@ -356,6 +356,6 @@ img:hover {
 /* model-item-page */
 .model-item-page {
   display: flex;
-  height: 70vh;
+  height: 100vh;
   align-items: center;
 }
