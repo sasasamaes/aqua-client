@@ -365,5 +365,77 @@ img:hover {
     flex-wrap: wrap;
     flex-direction: column;
     text-align: center;
+    background-color: white !important;
+  }
+  .service-item h3 {
+    color: black !important;
+  }
+
+  /* form */
+  .form-container {
+  }
+  .form-container-logo {
+    margin-top: 20px;
+  }
+  .form-container-info {
+    text-align: center;
+  }
+  .form-container-form {
+    height: auto !important;
+  }
+  .form-container-disclaimer {
+  }
+  /* banner */
+  .banner-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: inherit;
+    text-align: center;
+  }
+  .banner-container .banner-container-text {
+    justify-content: center;
+  }
+  .banner-container .banner-container-img {
+    position: inherit;
+    padding-bottom: 1.5rem;
+  }
+  .banner-container .banner-container-img img {
+    width: 75px;
+    height: 100px;
+  }
+
+  /* section2 */
+  .section2-container {
+  }
+  .section2-container h3 {
+    height: inherit;
+  }
+  .section2-img {
+    position: inherit;
+    top: 0;
+    left: 25%;
+    padding-bottom: 1.5rem;
+  }
+  .section2-text {
+    height: auto;
+    width: 85%;
+  }
+  .models-container h2 {
+    font-size: 2rem;
+  }
+  .models-container h3 {
+    font-size: 1.5rem;
+  }
+  .model-item {
+    height: auto;
+    margin-bottom: 2rem;
+  }
+  /* dialog */
+  .modal-dialog {
+    width: 96% !important;
+    top: 25%;
   }
 }
