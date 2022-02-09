@@ -370,7 +370,12 @@ img:hover {
   height: 100vh;
   align-items: center;
 }
-
+.model-btn-primary {
+  margin-bottom: 3rem;
+}
+.model-btn-primary button {
+  width: 30%;
+}
 @media only screen and (max-width: 900px) {
   .service-container {
     flex-wrap: wrap;

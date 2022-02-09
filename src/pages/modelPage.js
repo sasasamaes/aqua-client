@@ -40,7 +40,7 @@ function ModelPage() {
     <Layout global={global}>
       <Col className="model-item-page bg-dark text-light" key={`model-item`}>
         <Row>
-          <Col lg={12}>
+          <Col lg={12} md={12} xs={12} className="model-btn-primary">
             <Link to="/">
               <Button variant="primary">Atras</Button>
             </Link>
