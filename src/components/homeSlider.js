@@ -16,6 +16,9 @@ const HomeSlider = ({ homeSlider, lg }) => {
             </Carousel.Item>
           ))}
       </Carousel>
+      <Col lg={lg} className="">
+        holi
+      </Col>
     </Col>
   )
 }

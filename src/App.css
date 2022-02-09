@@ -84,9 +84,10 @@ img:hover {
   height: 35vh;
   padding-right: 2rem;
   padding-left: 2rem;
+  width: 100%;
 }
 .form-container .form-container-disclaimer {
-  height: 15vh;
+  height: 200px;
   padding-right: 2rem;
   padding-left: 2rem;
   display: flex;
@@ -152,7 +153,7 @@ img:hover {
   background-color: #fff !important;
 }
 .form-control {
-  padding: 0.1rem 0.5rem;
+  padding: 0.3rem 0.5rem;
   display: flex;
   flex-direction: column-reverse;
   position: relative;
@@ -360,7 +361,7 @@ img:hover {
   align-items: center;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   .service-container {
     flex-wrap: wrap;
     flex-direction: column;
@@ -383,7 +384,8 @@ img:hover {
   .form-container-form {
     height: auto !important;
   }
-  .form-container-disclaimer {
+  .form-container .form-container-disclaimer {
+    height: 100px;
   }
   /* banner */
   .banner-container {
@@ -437,5 +439,22 @@ img:hover {
   .modal-dialog {
     width: 96% !important;
     top: 25%;
+  }
+  /* master */
+  .master-container {
+    align-content: center;
+    display: flex;
+    padding: 0;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* .maps-container */
+  .maps-container {
+    padding-top: 0;
+  }
+  .form-control {
+    padding: 0.4rem 0.5rem;
   }
 }

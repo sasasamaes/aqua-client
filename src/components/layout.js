@@ -1,8 +1,8 @@
 import { Container, Row } from 'react-bootstrap'
 
 const Layout = ({ children }) => (
-  <Container padding={0}>
-    <Row className="content">{children}</Row>
+  <Container padding={0} fluid>
+    <Row>{children}</Row>
   </Container>
 )
 

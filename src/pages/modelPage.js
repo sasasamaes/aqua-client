@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import Layout from '../components/layout'
 import { Row, Col, Modal, Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../App.css'
 
@@ -39,6 +40,11 @@ function ModelPage() {
     <Layout global={global}>
       <Col className="model-item-page bg-dark text-light" key={`model-item`}>
         <Row>
+          <Col lg={12}>
+            <Link to="/">
+              <Button variant="primary">Atras</Button>
+            </Link>
+          </Col>
           <Col lg={8}>
             <img
               src={model?.architecturalPlan?.url}
