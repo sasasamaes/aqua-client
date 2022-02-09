@@ -1,5 +1,5 @@
 import React from 'react'
-import { Carousel, Col } from 'react-bootstrap'
+import { Carousel, Col, Row } from 'react-bootstrap'
 
 const HomeSlider = ({ homeSlider, lg }) => {
   return (
@@ -16,8 +16,35 @@ const HomeSlider = ({ homeSlider, lg }) => {
             </Carousel.Item>
           ))}
       </Carousel>
-      <Col lg={lg} className="">
-        holi
+      <Col lg={12} className="social-container">
+        <Row>
+          <Col lg={3} className="text-center">
+            <span>
+              <i class="fa fa-facebook-f"></i>
+            </span>
+          </Col>
+          <Col lg={3} className="text-center">
+            <span href="#">
+              <i class="fa fa-instagram"></i>
+            </span>
+          </Col>
+          <Col lg={3} className="text-center">
+            <span>
+              <i class="fa fa-twitter"></i>
+            </span>
+          </Col>
+          <Col lg={3} className="text-center">
+            <span>
+              <i class="fa fa-car"></i>
+            </span>
+          </Col>
+          <Col lg={12} className="text-center">
+            8667-3197 / 8394-2641
+          </Col>
+          <Col lg={12} className="text-center">
+            La Guacima a 1,4km de la ruta 27
+          </Col>
+        </Row>
       </Col>
     </Col>
   )
