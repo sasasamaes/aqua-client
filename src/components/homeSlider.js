@@ -20,22 +20,22 @@ const HomeSlider = ({ homeSlider, lg }) => {
         <Row>
           <Col lg={3} className="text-center">
             <span>
-              <i class="fa fa-facebook-f"></i>
+              <i className="fa fa-facebook-f"></i>
             </span>
           </Col>
           <Col lg={3} className="text-center">
             <span href="#">
-              <i class="fa fa-instagram"></i>
+              <i className="fa fa-instagram"></i>
             </span>
           </Col>
           <Col lg={3} className="text-center">
             <span>
-              <i class="fa fa-twitter"></i>
+              <i className="fa fa-twitter"></i>
             </span>
           </Col>
           <Col lg={3} className="text-center">
             <span>
-              <i class="fa fa-car"></i>
+              <i className="fa fa-car"></i>
             </span>
           </Col>
           <Col lg={12} className="text-center">

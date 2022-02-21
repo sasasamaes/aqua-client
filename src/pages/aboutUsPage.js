@@ -29,7 +29,7 @@ function AboutUsPage() {
 
   useEffect(() => {
     fetchData()
-  }, [])
+  }, [fetchData])
 
   return (
     <Layout global={global}>
@@ -41,7 +41,7 @@ function AboutUsPage() {
             <img
               src={partner?.logo?.url}
               alt={partner?.logo?.caption}
-              class="about-logo"
+              className="about-logo"
             />
             <p>{partner.description}</p>
             <a href={partner.url}>{partner.url}</a>

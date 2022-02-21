@@ -17,19 +17,17 @@ const Amenities = ({ amenities, lg }) => {
         <Row>
           {amenities &&
             amenities?.map((amenity, index) => (
-              <>
-                <Col
-                  lg={3}
-                  md={6}
-                  xs={12}
-                  key={`amanity-${index}`}
-                  className="amenity"
-                  onClick={() => handleShow(amenity)}
-                >
-                  <h3>{amenity.title}</h3>
-                  <img src={amenity.icon?.url} alt={amenity.icon?.caption} />
-                </Col>
-              </>
+              <Col
+                lg={3}
+                md={6}
+                xs={12}
+                key={`amanity-${index}`}
+                className="amenity"
+                onClick={() => handleShow(amenity)}
+              >
+                <h3>{amenity.title}</h3>
+                <img src={amenity.icon?.url} alt={amenity.icon?.caption} />
+              </Col>
             ))}
         </Row>
       </Col>
