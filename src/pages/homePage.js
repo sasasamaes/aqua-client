@@ -10,6 +10,8 @@ import Amenities from '../components/amenities'
 import Section2 from '../components/section2'
 import Models from '../components/models'
 import Maps from '../components/maps'
+import AboutUs from '../components/aboutUs'
+
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../App.css'
 
@@ -20,6 +22,7 @@ function Homepage() {
   const [models, setModels] = useState([])
   const [global, setGlobal] = useState([])
   const [amenities, setAmenities] = useState([])
+  const [partners, setPartner] = useState([])
 
   const fetchData = async () => {
     const url = 'https://aquacr-cms.herokuapp.com'
@@ -47,6 +50,10 @@ function Homepage() {
       const amenitiesResponse = await fetch(`${url}/amenities`)
       const amenitiesResponseJson = await amenitiesResponse.json()
       setAmenities(amenitiesResponseJson)
+
+      const partnersResponse = await fetch(`${url}/partners`)
+      const partnersResponseJson = await partnersResponse.json()
+      setPartner(partnersResponseJson)
     } catch (error) {
       console.log('error', error)
     }
@@ -55,9 +62,8 @@ function Homepage() {
   useEffect(() => {
     fetchData()
   }, [])
-
   return (
-    <Layout global={global}>
+    <Layout global={global} fluid>
       <HomeSlider homeSlider={homeSlider} lg={9} />
       <FormComponent lg={3} md={12} homepage={homepage} global={global} />
       <ServiceComponent lg={12} md={12} services={services} />
@@ -67,6 +73,8 @@ function Homepage() {
       <Section2 lg={12} homepage={homepage} />
       <Models lg={12} homepage={homepage} models={models} />
       <MasterPlan lg={12} md={12} homepage={homepage} amenities={amenities} />
+      <AboutUs lg={12} partners={partners} global={global} />
+
       <Maps lg={12} global={global} homepage={homepage} />
     </Layout>
   )

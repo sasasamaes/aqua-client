@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import Layout from '../components/layout'
 import { Row, Col, Modal, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import Nav from '../components/nav'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../App.css'
 
@@ -37,14 +38,11 @@ function ModelPage() {
   const handleShow = () => setShow(true)
 
   return (
-    <Layout global={global}>
+    <Layout global={global} fluid>
+      <Nav global={global} color="dark" type="page" />
+
       <Col className="model-item-page bg-dark text-light" key={`model-item`}>
         <Row>
-          <Col lg={12} md={12} xs={12} className="model-btn-primary">
-            <Link to="/">
-              <Button variant="primary">Atras</Button>
-            </Link>
-          </Col>
           <Col lg={8}>
             <img
               src={model?.architecturalPlan?.url}

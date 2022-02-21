@@ -39,7 +39,7 @@ const HomeSlider = ({ homeSlider, lg }) => {
             </span>
           </Col>
           <Col lg={12} className="text-center">
-            8667-3197 / 8394-2641
+            8394-2641 / 8667-3197
           </Col>
           <Col lg={12} className="text-center">
             La Guacima a 1,4km de la ruta 27

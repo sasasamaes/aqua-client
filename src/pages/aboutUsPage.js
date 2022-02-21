@@ -1,21 +1,23 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import Layout from '../components/layout'
-import { Row, Col, Modal, Button } from 'react-bootstrap'
+import { Row, Col, Carousel } from 'react-bootstrap'
+import Nav from '../components/nav'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../App.css'
 
 function AboutUsPage() {
   const params = useParams()
-  const [model, setModel] = useState([])
+  const [partner, setPartner] = useState({})
   const [global, setGlobal] = useState([])
 
+  // eslint-disable-next-line
   const fetchData = async () => {
     const url = 'https://aquacr-cms.herokuapp.com'
     try {
-      const modelResponse = await fetch(`${url}/models/${params.id}`)
-      const modelResponseJson = await modelResponse.json()
-      setModel(modelResponseJson)
+      const partnerResponse = await fetch(`${url}/partners/${params.id}`)
+      const partnerResponseJson = await partnerResponse.json()
+      setPartner(partnerResponseJson)
 
       const globalResponse = await fetch(`${url}/global`)
       const globalResponseJson = await globalResponse.json()
@@ -27,51 +29,37 @@ function AboutUsPage() {
 
   useEffect(() => {
     fetchData()
-  })
+  }, [])
 
-  const [show, setShow] = useState(false)
-
-  const handleClose = () => setShow(false)
-  const handleShow = () => setShow(true)
   return (
     <Layout global={global}>
-      <Col className="model-item-page" key={`model-item`}>
-        <Row>
-          <Col lg={5}>
-            <img
-              src={model?.architecturalPlan?.url}
-              alt={model?.architecturalPlan?.caption}
-            />
-          </Col>
-          <Col lg={6}>
-            <h3>{model.title}</h3>
-            <p>{model.price}</p>
-            <p>{model.description}</p>
+      <Nav global={global} color="light" type="page" title={partner.title} />
 
-            <Button variant="primary" onClick={handleShow}>
-              {model.btnText}
-            </Button>
+      <Col className="about-page" key={`about-item`}>
+        <Row>
+          <Col lg={7}>
+            <img
+              src={partner?.logo?.url}
+              alt={partner?.logo?.caption}
+              class="about-logo"
+            />
+            <p>{partner.description}</p>
+            <a href={partner.url}>{partner.url}</a>
+          </Col>
+          <Col lg={5}>
+            <Carousel>
+              {partner &&
+                partner?.slider?.map((slide, index) => (
+                  <Carousel.Item key={`slide-${index}`}>
+                    <img src={slide.url} alt={slide.caption} />
+                  </Carousel.Item>
+                ))}
+            </Carousel>
+          </Col>
+          <Col lg={7}>
+            <p>{partner.extraText}</p>
           </Col>
         </Row>
-        <Modal show={show} onHide={handleClose}>
-          <Modal.Header closeButton></Modal.Header>
-          <Modal.Body>
-            <Row>
-              <Col>
-                <iframe
-                  title={`iframe-${params.id}`}
-                  width="100%"
-                  height="460"
-                  src={`https://roundme.com/embed/${model?.UserRoundme}/${model?.hotpointRoundme}`}
-                  frameborder="0"
-                  webkitallowfullscreen
-                  mozallowfullscreen
-                  allowfullscreen
-                ></iframe>
-              </Col>
-            </Row>
-          </Modal.Body>
-        </Modal>
       </Col>
     </Layout>
   )

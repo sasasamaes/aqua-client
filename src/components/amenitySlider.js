@@ -10,9 +10,6 @@ const AmenitySlider = ({ amenities }) => {
             return (
               <Carousel.Item key={`slide-${index}`}>
                 <img src={amenity.modal?.url} alt={amenity.icon?.caption} />
-                <Carousel.Caption>
-                  <p>{amenity.title}</p>
-                </Carousel.Caption>
               </Carousel.Item>
             )
           }

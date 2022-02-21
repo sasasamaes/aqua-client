@@ -40,9 +40,7 @@ img:hover {
 
 /* NavBar */
 #navbar {
-  height: 40px;
-  color: white;
-  display: flex;
+  height: 70px;
 }
 
 #navbar img {
@@ -291,27 +289,29 @@ img:hover {
 }
 /* section2 */
 .section2-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
-  position: relative;
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
 .section2-container h3 {
-  height: 400px;
+  text-align: center;
 }
 .section2-img {
   width: 45vw;
-  position: absolute;
-  top: 17%;
-  left: 27%;
+  margin-bottom: -50px;
+  z-index: 2;
 }
 .section2-text {
-  height: 200px;
   width: 65%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  padding-top: 100px;
+  padding-bottom: 25px;
 }
 
 .section2-text p {
@@ -354,7 +354,6 @@ img:hover {
 /* maps-container */
 .maps-container {
   display: flex;
-  max-height: 55vh;
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 2rem;
@@ -375,6 +374,12 @@ img:hover {
 }
 .model-btn-primary button {
   width: 30%;
+}
+
+/* about-page */
+.about-logo {
+  width: 50%;
+  margin-bottom: 3rem;
 }
 @media only screen and (max-width: 900px) {
   .service-container {
