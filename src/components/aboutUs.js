@@ -3,7 +3,6 @@ import { Row, Col, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 const AboutUs = ({ lg, partners }) => {
-  console.log(partners)
   return (
     <Col lg={lg} className="about-container bg-light container-fluid pb-5">
       <Row>

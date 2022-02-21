@@ -56,7 +56,7 @@ function AboutUsPage() {
                 ))}
             </Carousel>
           </Col>
-          <Col lg={7}>
+          <Col lg={7} className="pt-4">
             <p>{partner.extraText}</p>
           </Col>
         </Row>

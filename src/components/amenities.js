@@ -39,7 +39,6 @@ const Amenities = ({ amenities, lg }) => {
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
           <Col>
-            {console.log(modal)}
             <img src={modal?.modal} alt={modal?.caption} />
           </Col>
         </Modal.Body>
