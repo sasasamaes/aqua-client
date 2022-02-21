@@ -74,7 +74,6 @@ function Homepage() {
       <Models lg={12} homepage={homepage} models={models} />
       <MasterPlan lg={12} md={12} homepage={homepage} amenities={amenities} />
       <AboutUs lg={12} partners={partners} global={global} />
-
       <Maps lg={12} global={global} homepage={homepage} />
     </Layout>
   )
