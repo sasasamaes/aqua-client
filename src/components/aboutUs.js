@@ -24,8 +24,12 @@ const AboutUs = ({ lg, partners }) => {
         <Col lg={12} className="about-img center">
           <Row className="flex-column justify-content-center align-items-center">
             {partners.map((partner, index) => (
-              <Col lg={4} className="border border-3 my-4 p-4">
-                <Link to={`/about-us/${partner.id}`} key={index}>
+              <Col lg={4} className="border border-3 my-4 p-4 ">
+                <Link
+                  to={`/about-us/${partner.id}`}
+                  key={index}
+                  className="text-black"
+                >
                   <h3>{partner.title}</h3>
                   <img src={partner.logo.url} alt={partner.logo.caption} />
                   {partner.image}

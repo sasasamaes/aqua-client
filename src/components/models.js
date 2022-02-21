@@ -22,7 +22,7 @@ const Models = ({ models, lg, md }) => {
                   <p>{model.price}</p>
                   <p>{model.description}</p>
                   <Link to={`model/${model.id}`}>
-                    <Button variant="primary">{model.btnText}</Button>
+                    <Button variant="primary">Ver Plano</Button>
                   </Link>
                 </Col>
               ))}
